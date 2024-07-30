@@ -4,3 +4,8 @@
     ```
     docker-compose up --build
     ```
+
+2. Open in Browser
+    ```
+    http://localhost:8085/
+    ```
