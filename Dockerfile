@@ -26,6 +26,7 @@ RUN apt-get update \
     && apt-get install -y xpra-codecs=6.1-r0-1 \
     && apt-get install -y xpra-x11=6.1-r0-1 \
     && apt-get install -y xpra=6.1-r0-1 \
+    && apt-get install -y gedit \
     && apt-get remove -y python3-pip avahi-daemon openssh-client \
     && apt-get autoremove -y \ 
     && mkdir -p /run/user/0/xpra \
@@ -50,6 +51,9 @@ RUN useradd -ms /bin/bash wineuser
 RUN usermod -a -G lpadmin wineuser
 
 WORKDIR /home/wineuser
+
+COPY --chown=wineuser:wineuser ./program/* ./program/
+RUN chown -R wineuser:wineuser ./program
 
 COPY ./run/run_gui.sh ./.run_gui.sh
 

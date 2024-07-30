@@ -1,0 +1,1 @@
+To debug your own application place it in this directory and edit the run_gui.sh
