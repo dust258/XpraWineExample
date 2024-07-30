@@ -1,0 +1,10 @@
+services:
+  l1-gui:
+    container_name: XPra-Sample-gui
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8085:8085"
+    tty: true
+    restart: on-failure

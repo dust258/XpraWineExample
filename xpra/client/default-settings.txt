@@ -1,0 +1,8 @@
+floating_menu = yes
+sound = no
+video = no
+av-sync = no
+blocked-hosts=xpra.org,www.xpra.org
+encoding = webp
+keyboard_layout = de
+dpi = 96
